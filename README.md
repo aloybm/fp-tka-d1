@@ -122,19 +122,24 @@ Dengan diberikan sebuah aplikasi berbasis API dengan spesifikasi terlampir, sela
 
   
 ## Hasil Pengujian Endpoint Setiap API
-- Get All Orders
+1. Get All Orders
+   - Endpoint: GET /orders
 ![WhatsApp Image 2023-12-14 at 23 21 11](https://github.com/aloybm/fp-tka-d1/assets/107543354/ba9f83de-3b9d-40fa-8853-8aab019e0618)
  
-- Get a Specific Order by ID
+2. Get a Specific Order by ID
+   - Endpoint: GET /orders/<order_id>
 ![WhatsApp Image 2023-12-14 at 23 21 47](https://github.com/aloybm/fp-tka-d1/assets/107543354/c0ba67e5-2664-41e6-97bf-cc993a2c872e)
 
-- Create a New Order
+3. Create a New Order
+   - Endpoint: POST /orders
 ![WhatsApp Image 2023-12-14 at 23 22 46](https://github.com/aloybm/fp-tka-d1/assets/107543354/392b9349-a745-4146-baf4-ecf9d7e16398)
 
-- Update an Order by ID
+4. Update an Order by ID
+   - Endpoint: PUT /orders/<order_id>
 ![WhatsApp Image 2023-12-14 at 23 23 19](https://github.com/aloybm/fp-tka-d1/assets/107543354/a5f487d2-538e-4857-b899-6d9b6dd8e522)
 
-- Delete an Order by ID
+5. Delete an Order by ID
+   - Endpoint: DELETE /orders/<order_id>
 ![WhatsApp Image 2023-12-14 at 23 20 20](https://github.com/aloybm/fp-tka-d1/assets/107543354/5c73ac43-a612-4b0c-89fb-a530a4ad4b86)
 
 ## Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust
