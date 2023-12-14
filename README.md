@@ -131,7 +131,7 @@ Dengan diberikan sebuah aplikasi berbasis API dengan spesifikasi terlampir, sela
 - Update an Order by ID
   
 - Delete an Order by ID
-
+![WhatsApp Image 2023-12-14 at 23 20 20](https://github.com/aloybm/fp-tka-d1/assets/107543354/5c73ac43-a612-4b0c-89fb-a530a4ad4b86)
 
 ## Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust
 
