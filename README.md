@@ -136,7 +136,7 @@ Untuk mengakses mongodb sebagai database, perlu dilakukan beberapa hal berikut i
 
 5. Pada Digital Ocean, menyalin connection string pada bagian connection details public network dengan menyesuaikan user dan database yang digunakan 
 
-   ![WhatsApp Image 2023-12-14 at 23 37 54](https://github.com/aloybm/fp-tka-d1/assets/107543354/7a0fe1cc-9e32-4389-81a3-f1342653abfd)
+![WhatsApp Image 2023-12-14 at 23 37 54](https://github.com/aloybm/fp-tka-d1/assets/107543354/7a0fe1cc-9e32-4389-81a3-f1342653abfd)
 
 6. Connect menggunakan connection string dan menambahkan IP ke dalam database Digital Ocean
 
