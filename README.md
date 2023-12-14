@@ -143,9 +143,27 @@ Dengan diberikan sebuah aplikasi berbasis API dengan spesifikasi terlampir, sela
 ![WhatsApp Image 2023-12-14 at 23 20 20](https://github.com/aloybm/fp-tka-d1/assets/107543354/5c73ac43-a612-4b0c-89fb-a530a4ad4b86)
 
 ## Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust
+1. Request Per Seconds (RPS) maksimum (60 detik)
+![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/b7f7fdd9-7fab-498b-a42e-98353e8168d4)
+
+![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/61d4a3fa-719c-40f7-88d8-6b896f119088)
+
+2. Peak Concurrency Maksimum Dengan Spawn Rate 25 (60 detik)
+![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/fae800a3-5fa1-44ee-8f09-b8691ca696d8)
+   
+3. Peak Concurrency Maksimum Dengan Spawn Rate 50 (60 detik)
+![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/8681d078-f05f-42c3-8537-8261fe044f76)
+
+![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/195f8526-4683-4149-b749-b9d7e37d5548)
+
+4. Peak Concurrency Maksimum Dengan Spawn Rate 100 (60 detik)
+![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/a5d0a8e7-9341-432c-af17-1936c2aa9345)
+
+![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/8c95350a-a02a-4d8c-9500-42bae0fd7209)
+
 
 ## Kesimpulan
-Dengan hasil-hasil ini, dapat disimpulkan bahwa dengan 1 juta rupiah per bulan (65 US$). Server yang mampu menangani beban kerja hingga tingkat maksimum yaitu 700 peak concurrency, dengan tingkat failure yang tetap 0% dalam semua skenario pengujian. Dengan kondisi ini, aplikasi atau server dapat dianggap telah lulus pengujian load dengan baik.
+Dengan hasil-hasil ini, dapat disimpulkan bahwa dengan 1 juta rupiah per bulan (65 US$). Server yang mampu menangani beban kerja hingga tingkat maksimum yaitu ... peak concurrency, dengan tingkat failure yang tetap 0% dalam semua skenario pengujian. Dengan kondisi ini, aplikasi atau server dapat dianggap telah lulus pengujian load dengan baik.
    
 ## Saran
 1. Cari  koneksi yang bagus agar locust bertambah bagus
