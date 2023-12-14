@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  worker2:
+    build: /root/worker-2
+    restart: always
+    ports:
+      - "8000:8000"
