@@ -144,9 +144,9 @@ Dengan diberikan sebuah aplikasi berbasis API dengan spesifikasi terlampir, sela
 
 ## Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust
 1. Request Per Seconds (RPS) maksimum (60 detik)
-![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/b7f7fdd9-7fab-498b-a42e-98353e8168d4)
-
 ![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/61d4a3fa-719c-40f7-88d8-6b896f119088)
+
+![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/b7f7fdd9-7fab-498b-a42e-98353e8168d4)
 
 2. Peak Concurrency Maksimum Dengan Spawn Rate 25 (60 detik)
 ![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/fae800a3-5fa1-44ee-8f09-b8691ca696d8)
