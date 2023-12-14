@@ -145,5 +145,8 @@ Dengan diberikan sebuah aplikasi berbasis API dengan spesifikasi terlampir, sela
 ## Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust
 
 ## Kesimpulan
-
+Dengan hasil-hasil ini, dapat disimpulkan bahwa dengan 1 juta rupiah per bulan (65 US$). Server yang mampu menangani beban kerja hingga tingkat maksimum yaitu 700 peak concurrency, dengan tingkat failure yang tetap 0% dalam semua skenario pengujian. Dengan kondisi ini, aplikasi atau server dapat dianggap telah lulus pengujian load dengan baik.
+   
 ## Saran
+1. Cari  koneksi yang bagus agar locust bertambah bagus
+2. Jika ingin terus melakukan testing pada locust, isi dari database perlu diperhatikan
