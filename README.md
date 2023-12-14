@@ -114,11 +114,33 @@ Dengan diberikan sebuah aplikasi berbasis API dengan spesifikasi terlampir, sela
 
 
 ## Langkah Implementasi dan Konfigurasi 
-I. Load Balancing
-  
-II. Instalasi app.py
-  
-III. Instalasi mongodb
+**A. Load Balancing dan Worker**
+1. Memilih server region
+   
+![WhatsApp Image 2023-12-14 at 23 29 55](https://github.com/aloybm/fp-tka-d1/assets/107543354/43aaf511-d9c6-43f2-8009-5c0a4ea3a8b1)
+
+2. Memilih image yang digunakan, dalam final project ini digunakan ubuntu sebagai imagenya
+   
+![WhatsApp Image 2023-12-14 at 23 30 07](https://github.com/aloybm/fp-tka-d1/assets/107543354/dcdd014c-445c-4b55-b69c-cb6dc343e067)
+
+3. Memilih tipe droplet sesuai dengan rancangan arsitektur yang diberikan dari shared CPU, tipe disk yang digunakan, hingga harga dan spesifikasinya
+   
+![WhatsApp Image 2023-12-14 at 23 30 40](https://github.com/aloybm/fp-tka-d1/assets/107543354/5e5b567c-c579-4b3c-964a-1b9d278b3636)
+
+4. Menerapkan autentikasi dengan menggunakan password, kemudian memasukkan password untuk didaftarkan
+
+![WhatsApp Image 2023-12-14 at 23 31 03](https://github.com/aloybm/fp-tka-d1/assets/107543354/f8470737-00be-4fc9-8f92-609c39ab7fea)
+
+5. Melakukan finalize droplet dan klik create doplet
+
+![WhatsApp Image 2023-12-14 at 23 31 40](https://github.com/aloybm/fp-tka-d1/assets/107543354/873e332b-ba60-4b33-a0da-0c833571e509)
+
+6. Melakukan instalasi docker pada VM melalui `https://docs.docker.com/engine/install/ubuntu/`
+
+7. Masuk ke terminal dan masuk ke ssh
+![WhatsApp Image 2023-12-14 at 23 32 21](https://github.com/aloybm/fp-tka-d1/assets/107543354/b8fe0660-666a-41ed-b889-93ef27719f9a)
+
+**B. Instalasi mongodb <br>**
 Untuk mengakses mongodb sebagai database, perlu dilakukan beberapa hal berikut ini pada Digital Ocean.
 1. Membuat cluster database dengan memilih datacenter negara dan memilih database engine berupa MongoDB
 
@@ -146,7 +168,13 @@ Untuk mengakses mongodb sebagai database, perlu dilakukan beberapa hal berikut i
 
 ![WhatsApp Image 2023-12-14 at 23 41 10](https://github.com/aloybm/fp-tka-d1/assets/107543354/491c3eb9-b82e-49ac-903f-6182aa0a212f)
 
-  
+**C. Konfigurasi <br>**
+Dengan kondisi yang digunakan adalah docker, untuk membuat docker agar terus berjalan, maka perlu dojalankan command 
+`docker-compose up --build -d`
+
+Sebaliknya, sebagaimana yang digunakan pada pengerjaan ini menggunakan nginx, maka perlu dijalankan command
+`bash script.sh`
+
 ## Hasil Pengujian Endpoint Setiap API
 1. Get All Orders
    - Endpoint: GET /orders
