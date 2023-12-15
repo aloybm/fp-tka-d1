@@ -17,7 +17,6 @@
 - [Langkah Implementasi dan Konfigurasi](#Implementasi)
 - [Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust](#Loadtesting)
 - [Kendala yang Dihadapi](#Kendala)
-- [Daftar Isi](#DaftarIsi)
 - [Kesimpulan](#Kesimpulan)
 - [Saran](#Saran)
 
