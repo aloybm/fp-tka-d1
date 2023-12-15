@@ -12,12 +12,11 @@
 - [Anggota Kelompok TKA D-1](#AnggotaKelompokTKAD-1)
 - [Daftar Isi](#DaftarIsi)
 - [Pengenalan Permasalahan](#PengenalanPermasalahan)
-- [Desain Rancangan Arsitektur Komputasi Awan](#DesainRancanganArsitekturKomputasiAwan)
+- [Desain Rancangan Arsitektur Komputasi Awan](#RancanganArsitekturKomputasiAwan)
 - [Spesifikasi Harga](#SpesifikasiHarga)
 - [Langkah Implementasi dan Konfigurasi](#LangkahImplementasidanKonfigurasi)
-- [Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust](#HasilPengujiandanAnalisisLoadtestingMenggunakanLocust)
+- [Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust](#HasilPengujianAnalisisLoadtestingMenggunakanLocust)
 - [Kesimpulan](#Kesimpulan)
-- [Saran](#Saran)
 - [Saran](#Saran)
 
 ## Pengenalan Permasalahan
