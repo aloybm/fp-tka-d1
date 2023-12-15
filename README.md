@@ -9,13 +9,13 @@
 | Refaldi Agustian       | 5027211015 |
 
 ## Daftar Isi
-- [Anggota Kelompok TKA D-1](#AnggotaKelompokTKAD-1)
-- [Daftar Isi](#DaftarIsi)
-- [Pengenalan Permasalahan](#PengenalanPermasalahan)
-- [Desain Rancangan Arsitektur Komputasi Awan](#RancanganArsitekturKomputasiAwan)
-- [Spesifikasi Harga](#SpesifikasiHarga)
-- [Langkah Implementasi dan Konfigurasi](#LangkahImplementasidanKonfigurasi)
-- [Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust](#HasilPengujianAnalisisLoadtestingMenggunakanLocust)
+- [Anggota Kelompok TKA D-1](#Kelompok)
+- [Daftar Isi](#Daftar_isi)
+- [Pengenalan Permasalahan](#Permasalahan)
+- [Desain Rancangan Arsitektur Komputasi Awan](#Arsitektur)
+- [Spesifikasi Harga](#Spesifikasi)
+- [Langkah Implementasi dan Konfigurasi](#Implementasi)
+- [Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust](#Loadtesting)
 - [Kendala yang Dihadapi](#Kendala)
 - [Kesimpulan](#Kesimpulan)
 - [Saran](#Saran)
