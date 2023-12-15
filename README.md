@@ -1,4 +1,4 @@
-# FP-TKA-D1
+# Final Project - Teknologi Komputasi Awan - D1
 ## Anggota Kelompok TKA D-1:
 | Nama                   | NRP        |
 | ---------------------- | ---------- |
