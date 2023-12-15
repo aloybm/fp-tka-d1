@@ -18,6 +18,7 @@
 - [Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust](#HasilPengujiandanAnalisisLoadtestingMenggunakanLocust)
 - [Kesimpulan](#Kesimpulan)
 - [Saran](#Saran)
+- [Saran](#Saran)
 
 ## Pengenalan Permasalahan
 Sebagai lulusan Teknologi Informasi dan juga Ahli IT, kualifikasi kemampuan yang perlu dimiliki adalah kemampuan merancang, membangun, mengelola aplikasi berbasis komputer menggunakan layanan awan untuk memenuhi kebutuhan organisasi.  
