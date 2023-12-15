@@ -16,6 +16,7 @@
 - [Spesifikasi Harga](#SpesifikasiHarga)
 - [Langkah Implementasi dan Konfigurasi](#LangkahImplementasidanKonfigurasi)
 - [Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust](#HasilPengujianAnalisisLoadtestingMenggunakanLocust)
+- [Kendala yang Dihadapi](#Kendala)
 - [Kesimpulan](#Kesimpulan)
 - [Saran](#Saran)
 
