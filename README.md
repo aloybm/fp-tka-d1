@@ -153,7 +153,7 @@ Untuk mengakses MongoDB sebagai database, perlu dilakukan beberapa hal berikut i
 
 3. Melakukan finalize dan klik create database cluster.
 
-![WhatsApp Image 2023-12-14 at 23 35 05](https://github.com/aloybm/fp-tka-d1/assets/107543354/99d38bdc-9b81-426d-bded-080d29140166)
+![WhatsApp Image 2023-12-15 at 08 58 43](https://github.com/aloybm/fp-tka-d1/assets/107543354/1266562b-0d80-4b70-96f2-284bad7e8e39)
 
 4. Mengundur aplikasi MongoDB Composs GUI melalui `https://www.mongodb.com/try/download/compass`.
 
