@@ -114,7 +114,7 @@ Dengan diberikan sebuah aplikasi berbasis API dengan spesifikasi terlampir, sela
 
 
 ## Langkah Implementasi dan Konfigurasi 
-**A. Load Balancing dan Worker**
+**A. Pembuatan Droplet**
 1. Memilih server region
    
 ![WhatsApp Image 2023-12-14 at 23 29 55](https://github.com/aloybm/fp-tka-d1/assets/107543354/43aaf511-d9c6-43f2-8009-5c0a4ea3a8b1)
@@ -168,11 +168,151 @@ Untuk mengakses mongodb sebagai database, perlu dilakukan beberapa hal berikut i
 
 ![WhatsApp Image 2023-12-14 at 23 41 10](https://github.com/aloybm/fp-tka-d1/assets/107543354/491c3eb9-b82e-49ac-903f-6182aa0a212f)
 
-**C. Konfigurasi <br>**
+**C. Load Balancing <br>**
+Pada konfigurasi load balancing dilakukan 2 uji coba yaitu penggunaan docker dan Nginx.
+- Dengan penggunaan **docker** dijalankan kode berikut pada lb-balancer
+```
+FROM nginx
+RUN rm /etc/nginx/conf.d/default.conf
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+```
+```
+version: '3'
+services:
+  loadbalancer:
+    build: .
+    ports:
+      - "80:80"
+```
+- Dengan penggunaan **Nginx** dijalankan kode nginx.conf dan script.sh pada lb-balancer
+Dari kedua uji coba, pada final project ini digunakan implementasi menggunakan Nginx, berikut adalah penjelasan mengenai kodenya.
+
+**Konfigurasi Nginx**
+Konfigurasi kode Nginx ini membuat server mendengarkan permintaan pada port 80 untuk semua nama server dan meneruskan permintaan tersebut ke salah satu dari dua server backend dengan menggunakan load balancing. Grup backend disebut "droplet" dan terdiri dari dua server dengan alamat IP dan port tertentu.
+```
+upstream droplet {
+    server 165.22.245.44:8000;
+    server 157.245.157.246:8000;
+}
+
+server {
+    listen 80;
+    server_name _;
+
+    location / {
+        proxy_pass http://droplet;
+    }
+}
+```
+Kode di bawah ini akan melakukan instalasi PHP, Nginx, dan PHP-FPM, kemudian mengonfigurasi Nginx sebagai load balancer dengan dua backend server. Konfigurasi Nginx disimpan di /etc/nginx/sites-available/loadbalancer dan diaktifkan dengan membuat symlink. Selain itu, konfigurasi default Nginx dihapus, dan layanan Nginx di-restart untuk menerapkan perubahan.
+```
+apt-get update
+apt-get install php -y
+apt install nginx php php-fpm -y
+
+echo 'upstream loadbalancer {
+  server 165.22.245.44:8000 ;
+  server 157.245.157.246:8000 ;
+}
+
+server {
+  listen 80;
+  server_name _;
+
+  location / {
+    proxy_pass http://loadbalancer;
+  }
+}
+' > /etc/nginx/sites-available/loadbalancer
+
+ln -s /etc/nginx/sites-available/loadbalancer /etc/nginx/sites-enabled/jarkom
+
+rm /etc/nginx/sites-enabled/default
+
+service nginx restart
+```
+
+**D. Instalasi app.py <br>**
+Menjalankan kode berikut pada setiap worker
+```
+from flask import Flask, jsonify, request
+from flask_pymongo import PyMongo
+from bson import ObjectId
+
+app = Flask(__name__)
+
+# Configuration for MongoDB
+app.config['MONGO_URI'] = 'mongodb+srv://doadmin:1738Px20nhKIrX65@db-mongodb-sgp1-84334-7ab46429.mongo.ondigitalocean.com/orders_db?tls=true&authSource=admin&replicaSet=db-mongodb-sgp1-84334'
+mongo = PyMongo(app)
+
+# Routes
+
+# Get all orders
+@app.route('/orders', methods=['GET'])
+def get_orders():
+    orders = mongo.db.orders.find()
+    orders_list = []
+    for order in orders:
+        order['_id'] = str(order['_id'])  # Convert ObjectId to string
+        orders_list.append(order)
+    return jsonify({"orders": orders_list})
+
+# Get a specific order by ID
+@app.route('/orders/<string:order_id>', methods=['GET'])
+def get_order(order_id):
+    order = mongo.db.orders.find_one({'_id': ObjectId(order_id)})
+    if order:
+        order['_id'] = str(order['_id'])  # Convert ObjectId to string
+        return jsonify({"order": order})
+    else:
+        return jsonify({"message": "Order not found"}), 404
+
+# Create a new order
+@app.route('/orders', methods=['POST'])
+def create_order():
+    data = request.json
+    new_order = {
+        'product': data['product'],
+        'quantity': data['quantity'],
+        'customer_name': data['customer_name'],
+        'customer_address': data['customer_address']
+    }
+    result = mongo.db.orders.insert_one(new_order)
+    new_order['_id'] = str(result.inserted_id)  # Convert ObjectId to string
+    return jsonify({"message": "Order created successfully", "order": new_order})
+
+# Update an order by ID
+@app.route('/orders/<string:order_id>', methods=['PUT'])
+def update_order(order_id):
+    data = request.json
+    updated_order = {
+        'product': data.get('product'),
+        'quantity': data.get('quantity'),
+        'customer_name': data.get('customer_name'),
+        'customer_address': data.get('customer_address')
+    }
+    mongo.db.orders.update_one({'_id': ObjectId(order_id)}, {'$set': updated_order})
+    updated_order['_id'] = order_id
+    return jsonify({"message": "Order updated successfully", "order": updated_order})
+
+# Delete an order by ID
+@app.route('/orders/<string:order_id>', methods=['DELETE'])
+def delete_order(order_id):
+    result = mongo.db.orders.delete_one({'_id': ObjectId(order_id)})
+    if result.deleted_count > 0:
+        return jsonify({"message": "Order deleted successfully"})
+    else:
+        return jsonify({"message": "Order not found"}), 404
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+**C. Running Command <br>**
 Dengan kondisi yang digunakan adalah docker, untuk membuat docker agar terus berjalan, maka perlu dojalankan command 
 `docker-compose up --build -d`
 
-Sebaliknya, sebagaimana yang digunakan pada pengerjaan ini menggunakan nginx, maka perlu dijalankan command
+Sebaliknya, sebagaimana yang digunakan pada pengerjaan ini menggunakan Nginx, maka perlu dijalankan command
 `bash script.sh`
 
 ## Hasil Pengujian Endpoint Setiap API
@@ -198,7 +338,7 @@ Sebaliknya, sebagaimana yang digunakan pada pengerjaan ini menggunakan nginx, ma
 
 ## Hasil Pengujian dan Analisis Loadtesting Menggunakan Locust
 1. Request Per Seconds (RPS) maksimum (60 detik)
-Hasil pengujian load testing pada locust dilakukan dengan 2 kondisi, di mana yang pertama menggunakan docker, dan yang kedua menggunakan nginx. Dari sini didapatkan bahwa pada percobaan pertama yang menggunakan docker berjalan sangat lambat, sehingga dilakukan peralihan menggunakan nginx.
+Hasil pengujian load testing pada locust dilakukan dengan 2 kondisi, di mana yang pertama menggunakan docker, dan yang kedua menggunakan Nginx. Dari sini didapatkan bahwa pada percobaan pertama yang menggunakan docker berjalan sangat lambat, sehingga dilakukan peralihan menggunakan Nginx.
 ![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/61d4a3fa-719c-40f7-88d8-6b896f119088)
 
 ![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/b7f7fdd9-7fab-498b-a42e-98353e8168d4)
