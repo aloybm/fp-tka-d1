@@ -364,7 +364,7 @@ Hasil pengujian load testing pada locust dilakukan dengan 2 kondisi, di mana yan
 3. Mengalami block account pada saat pengerjaan berlangsung.
    
 ## Kesimpulan
-Dapat disimpulkan bahwa dengan 1 juta rupiah per bulan (65 US$), server yang mampu menangani beban kerja hingga tingkat maksimum yaitu ... peak concurrency, dengan tingkat failure yang tetap 0% dalam semua skenario pengujian. Hasil uji testing yang kami lakukan aplikasi atau server belum dapat dikatakan baik sepenuhnya dan perlu adanya evaluasi terus menerus.
+Dapat disimpulkan bahwa dengan 1 juta rupiah per bulan (65 US$), server yang mampu menangani beban kerja hingga tingkat maksimum dengan tingkat failure yang tetap 0% dalam semua skenario pengujian. Hasil uji testing yang kami lakukan aplikasi atau server belum dapat dikatakan baik sepenuhnya dan perlu adanya evaluasi terus menerus.
    
 ## Saran
 1. Menggunakan koneksi jaringan yang lancar agar hasil load testing locust bertambah bagus.
