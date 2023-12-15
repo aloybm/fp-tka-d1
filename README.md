@@ -1,5 +1,5 @@
 # 🔥Final Project - Teknologi Komputasi Awan - D1🔥 
-## Anggota Kelompok TKA D-1:
+## Anggota Kelompok TKA D-1: 
 | Nama                   | NRP        |
 | ---------------------- | ---------- |
 | Wahyu Andhika Rizaldi  | 5027211003 |
