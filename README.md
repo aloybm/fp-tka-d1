@@ -344,12 +344,24 @@ Hasil pengujian load testing pada locust dilakukan dengan 2 kondisi, di mana yan
 ![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/61d4a3fa-719c-40f7-88d8-6b896f119088)
 
 2. Peak Concurrency Maksimum Dengan Spawn Rate 25 (60 detik)
+Pada hasil pengujian locust dengan spawn rate 25 dalam 60 detik didapatkan :
+- RPS : 223.6
+- Peak Concurrency : 1000
+- Failure : 0
 ![25](https://github.com/aloybm/fp-tka-d1/assets/107543354/a80cdeb8-caf1-4583-8b09-e955bcb5a156)
    
-3. Peak Concurrency Maksimum Dengan Spawn Rate 50 (60 detik)
+4. Peak Concurrency Maksimum Dengan Spawn Rate 50 (60 detik)
+Pada hasil pengujian locust dengan spawn rate 50 dalam 60 detik didapatkan :
+- RPS : 254.3
+- Peak Concurrency : 1000
+- Failure : 0
 ![50](https://github.com/aloybm/fp-tka-d1/assets/107543354/c8e6f2ab-32d3-4245-81f4-9070de6d5e4c)
 
-4. Peak Concurrency Maksimum Dengan Spawn Rate 100 (60 detik)
+5. Peak Concurrency Maksimum Dengan Spawn Rate 100 (60 detik)
+Pada hasil pengujian locust dengan spawn rate 100 dalam 60 detik didapatkan :
+- RPS : 237.5
+- Peak Concurrency : 1800-2000
+- Failure : 0
 ![100](https://github.com/aloybm/fp-tka-d1/assets/107543354/2142c938-8529-4054-b397-9805f304e47e)
 
 ## Kendala yang Dihadapi
@@ -358,7 +370,7 @@ Hasil pengujian load testing pada locust dilakukan dengan 2 kondisi, di mana yan
 3. Mengalami block account pada saat pengerjaan berlangsung.
    
 ## Kesimpulan
-Dapat disimpulkan bahwa dengan 1 juta rupiah per bulan (65 US$), server yang mampu menangani beban kerja hingga tingkat maksimum dengan Spawn Rate 50 di mana Peak Concurrency yang dihasilkan sebanyak 1000 dan RPS sebanyak 254.3. Tingkat failure yang tetap 0% dalam semua skenario pengujian. Untuk mendapatkan hasil pengujian yang lebih cepat disarankan menggunakan nginx.
+Dapat disimpulkan bahwa dengan 1 juta rupiah per bulan (65 US$), server yang mampu menangani beban kerja hingga tingkat maksimum dengan Spawn Rate 50 di mana RPS sebanyak 254.3 dan Peak Concurrency yang dihasilkan sebanyak 1000. Tingkat failure yang tetap 0% dalam semua skenario pengujian. Untuk mendapatkan hasil pengujian yang lebih cepat disarankan menggunakan nginx.
    
 ## Saran
 1. Menggunakan koneksi jaringan yang lancar agar hasil load testing locust bertambah bagus.
