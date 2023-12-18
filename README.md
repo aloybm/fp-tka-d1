@@ -348,6 +348,7 @@ Pada hasil pengujian locust dengan spawn rate 25 dalam 60 detik didapatkan :
 - RPS : 223.6
 - Peak Concurrency : 1000
 - Failure : 0
+  
 ![25](https://github.com/aloybm/fp-tka-d1/assets/107543354/a80cdeb8-caf1-4583-8b09-e955bcb5a156)
    
 4. Peak Concurrency Maksimum Dengan Spawn Rate 50 (60 detik)
@@ -355,6 +356,7 @@ Pada hasil pengujian locust dengan spawn rate 50 dalam 60 detik didapatkan :
 - RPS : 254.3
 - Peak Concurrency : 1000
 - Failure : 0
+  
 ![50](https://github.com/aloybm/fp-tka-d1/assets/107543354/c8e6f2ab-32d3-4245-81f4-9070de6d5e4c)
 
 5. Peak Concurrency Maksimum Dengan Spawn Rate 100 (60 detik)
@@ -362,6 +364,7 @@ Pada hasil pengujian locust dengan spawn rate 100 dalam 60 detik didapatkan :
 - RPS : 237.5
 - Peak Concurrency : 1800-2000
 - Failure : 0
+  
 ![100](https://github.com/aloybm/fp-tka-d1/assets/107543354/2142c938-8529-4054-b397-9805f304e47e)
 
 ## Kendala yang Dihadapi
