@@ -346,17 +346,13 @@ Hasil pengujian load testing pada locust dilakukan dengan 2 kondisi, di mana yan
 ![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/b7f7fdd9-7fab-498b-a42e-98353e8168d4)
 
 2. Peak Concurrency Maksimum Dengan Spawn Rate 25 (60 detik)
-![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/fae800a3-5fa1-44ee-8f09-b8691ca696d8)
+![25](https://github.com/aloybm/fp-tka-d1/assets/107543354/a80cdeb8-caf1-4583-8b09-e955bcb5a156)
    
 3. Peak Concurrency Maksimum Dengan Spawn Rate 50 (60 detik)
-![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/8681d078-f05f-42c3-8537-8261fe044f76)
-
-![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/195f8526-4683-4149-b749-b9d7e37d5548)
+![50](https://github.com/aloybm/fp-tka-d1/assets/107543354/c8e6f2ab-32d3-4245-81f4-9070de6d5e4c)
 
 4. Peak Concurrency Maksimum Dengan Spawn Rate 100 (60 detik)
-![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/a5d0a8e7-9341-432c-af17-1936c2aa9345)
-
-![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/8c95350a-a02a-4d8c-9500-42bae0fd7209)
+![100](https://github.com/aloybm/fp-tka-d1/assets/107543354/2142c938-8529-4054-b397-9805f304e47e)
 
 ## Kendala yang Dihadapi
 1. Pendaftaran pada bagian kartu kredit.
@@ -364,7 +360,7 @@ Hasil pengujian load testing pada locust dilakukan dengan 2 kondisi, di mana yan
 3. Mengalami block account pada saat pengerjaan berlangsung.
    
 ## Kesimpulan
-Dapat disimpulkan bahwa dengan 1 juta rupiah per bulan (65 US$), server yang mampu menangani beban kerja hingga tingkat maksimum dengan tingkat failure yang tetap 0% dalam semua skenario pengujian. Hasil uji testing yang kami lakukan aplikasi atau server belum dapat dikatakan baik sepenuhnya dan perlu adanya evaluasi terus menerus.
+Dapat disimpulkan bahwa dengan 1 juta rupiah per bulan (65 US$), server yang mampu menangani beban kerja hingga tingkat maksimum dengan Spawn Rate 50 di mana Peak Concurrency yang dihasilkan sebanyak 1000 dan RPS sebanyak 254.3. Tingkat failure yang tetap 0% dalam semua skenario pengujian. Untuk mendapatkan hasil pengujian yang lebih cepat disarankan menggunakan nginx.
    
 ## Saran
 1. Menggunakan koneksi jaringan yang lancar agar hasil load testing locust bertambah bagus.
