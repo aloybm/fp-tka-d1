@@ -343,8 +343,6 @@ Sebaliknya, sebagaimana yang digunakan pada pengerjaan ini menggunakan Nginx, ma
 Hasil pengujian load testing pada locust dilakukan dengan 2 kondisi, di mana yang pertama menggunakan Docker, dan yang kedua menggunakan Nginx. Dari sini didapatkan bahwa pada percobaan pertama yang menggunakan Docker berjalan sangat lambat, sehingga dilakukan peralihan menggunakan Nginx.
 ![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/61d4a3fa-719c-40f7-88d8-6b896f119088)
 
-![image](https://github.com/aloybm/fp-tka-d1/assets/107543354/b7f7fdd9-7fab-498b-a42e-98353e8168d4)
-
 2. Peak Concurrency Maksimum Dengan Spawn Rate 25 (60 detik)
 ![25](https://github.com/aloybm/fp-tka-d1/assets/107543354/a80cdeb8-caf1-4583-8b09-e955bcb5a156)
    
